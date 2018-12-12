@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Products from '../../components/Miscelaneous/Products/Products';
-import data from '../../data/products.json'
+import Products from '../../Products/Products';
+import data from '../../../data/products.json'
 
 export class HomePage extends Component {
   render() {
