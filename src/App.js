@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Layout from './components/Layout/Layout';
+import Layout from './hoc/Layout/Layout';
+import Router from './components/Router/Router';
 
 class App extends Component {
   render() {
     return (
       <div >
-        <h1> Shopping cart</h1>
         <Layout>
-          <h1>Test</h1>
+          <Router />
         </Layout>
       </div>
     );
