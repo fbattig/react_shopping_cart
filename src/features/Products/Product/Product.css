@@ -1,5 +1,10 @@
 .Product {
-  padding: 10px 30p;
-  margin: 30px;
-  width: 200px;
+  width: 220px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    margin: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
 }

@@ -14,8 +14,10 @@ const product = (props) => {
         title={props.name}
         src={`/products/${props.product.image}`} />
       <div>{props.product.description}</div>
-      <div>${props.product.price}</div>
+      <div>Qty: {props.product.inventory}</div>
+      <div>Price: ${props.product.price}</div>
       <div>
+
         <AddBtn
           cartItem={props.cartItem}
           product={props.product}

@@ -22,6 +22,7 @@ const cart = (props) => {
           <td>{item.quantity}</td>
           <td>
             <button
+              disabled={!(item.inventory-item.quantity)> 0}
               onClick={() => props.addToCart(item)}
             >+</button>
             
