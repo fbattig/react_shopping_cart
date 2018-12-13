@@ -12,6 +12,7 @@ class Products extends Component {
               key={product.id}
               product={product}
               addToCart={this.props.addToCart}
+              removeFromCart={this.props.removeFromCart}
               cartItem={this.props.cart.filter(cartItem => cartItem.id === product.id)[0]}
               />
         )}

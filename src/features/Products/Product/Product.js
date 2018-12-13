@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from '../../../components/UI/Button/Button';
 import classes from './Product.css';
+import AddBtn from './add-btn';
+import RemoveBtn from './remove-btn';
 
 const product = (props) => {
   
@@ -15,13 +16,21 @@ const product = (props) => {
       <div>{props.product.description}</div>
       <div>${props.product.price}</div>
       <div>
-        <Button
-          btnType="Success"
-          clicked={() => props.addToCart(props)}
-        > Add to Cart ({
-            (props.cartItem && props.cartItem.quantity) || 0
-        })</Button>
+        <AddBtn
+          cartItem={props.cartItem}
+          product={props.product}
+          addToCart={props.addToCart} />
+        {
+          props.cartItem
+            ?
+            <RemoveBtn
+              cartItem={props.cartItem}
+              product={props.product}
+              removeFromCart={props.removeFromCart} />
+            : null
+        }
       </div>
+      
     </div>
   )
 }
