@@ -2,22 +2,19 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Product from './Product/Product';
 import classes from './Products.css';
-import { cartItemsWithQuantities } from '../pages/Cart/Cart';
 
 class Products extends Component {
   render() {
     return (
       <div className={classes.Products}>
-        {this.props.products.map(product => {
-          return (
+        {this.props.products.map(product => 
             <Product
               key={product.id}
               product={product}
               addToCart={this.props.addToCart}
-              cart={cartItemsWithQuantities(this.props.cart)}
+              cartItem={this.props.cart.filter(cartItem => cartItem.id === product.id)[0]}
               />
-         )
-        })}
+        )}
       </div>
     )
   }
