@@ -7,13 +7,14 @@ const product = (props) => {
   
   return (
     <div className={classes.Product}>
-      <h3> {props.product.name}</h3>
-      <img
+      <h3> {props.product.title}</h3>
+      {/* <img
         alt=""
         height={100}
         title={props.name}
-        src={`/products/${props.product.image}`} />
-      <div>{props.product.description}</div>
+      // src={`/products/${props.product.image}`}
+      /> */}
+      {/* <div>{props.product.description}</div> */}
       <div>Qty: {props.product.inventory}</div>
       <div>Price: ${props.product.price}</div>
       <div>
